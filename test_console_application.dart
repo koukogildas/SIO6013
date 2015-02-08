@@ -29,12 +29,4 @@ var s = r"In a raw string, even \n isn't special.";
 print(s);
 // Unicode escapes work: [heart]
 print('Unicode escapes work: \u2668');
-
-if (1) {
-  print('JS prints this line.');
-} else {
-  print('Dart in production mode prints this line.');
-  // However, in checked mode, if (1) throws an
-  // exception because 1 is not boolean.
-}
 }
