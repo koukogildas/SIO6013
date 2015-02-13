@@ -30,6 +30,7 @@ class PersonneAdd extends WebComponent {
     var personne = new Personne();
       personne.nom = nom.value;
       personne.prenom = prenom.value;
+      personne.idPersonne = '${nom} + ${prenom}';
       if (personnes.add(personne)) {
         message.text = 'added';
         personnes.order();
