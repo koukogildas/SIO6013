@@ -1,6 +1,6 @@
 part of dartlero_contacts_personne;
 
-class model_contacts_personne extends ConceptModel {
+class Model_contacts_personne extends ConceptModel {
 
   static final String personne = 'personne';
 
