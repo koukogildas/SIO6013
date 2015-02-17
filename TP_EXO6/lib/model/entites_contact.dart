@@ -1,12 +1,19 @@
+/*
+  Titre:     Entité Contact
+  Auteur:    Gildas Kouko
+  Influence: Dzenan Ridjanovic 
+  Création:  12-02-2015
+*/
+
 part of dartlero_contacts_personne;
 
 class Contact extends ConceptEntity<Contact> {
   
+  // Attributs
   String email;
   String telephone;
   
-  Contact newEntity() => new Contact();
-  
+  // Propriétés 
   String get idContact => super.code;
   set idContact(String idContact){
     if(code == null){
@@ -14,11 +21,13 @@ class Contact extends ConceptEntity<Contact> {
     }
   }
 
+  // Constructeur
+  Contact newEntity() => new Contact(); 
+  
+  // Surchage de la fonction ToString()
   String toString() {
-     return '  {\n '
-            '   email: ${email},'
-            '   telephone: ${telephone}\n'
-            '  }\n';
+     return '{\n email: ${email},'
+              'telephone: ${telephone}\n}\n';
    }
   
    Map<String, Object> toJson() {
@@ -37,7 +46,7 @@ class Contact extends ConceptEntity<Contact> {
 }
 
 class Contacts extends ConceptEntities<Contact> {
-
+  
   Contacts newEntities() => new Contacts();
   Contact newEntity() => new Contact();
 

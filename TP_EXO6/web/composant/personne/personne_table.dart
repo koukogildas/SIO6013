@@ -6,7 +6,7 @@ class PersonneTable extends WebComponent {
   Personnes personnes;
   Personne personne;
   @observable
-  bool showPersonneyAdd = false;
+  bool showPersonneAdd = false;
   @observable
   bool showPersonneEdit = false;
   @observable
@@ -15,10 +15,10 @@ class PersonneTable extends WebComponent {
   add() {
     ButtonElement addPersonne = querySelector('#addPersonneButton');
     if (addPersonne.text == 'Show Add') {
-      showPersonneyAdd = true;
+      showPersonneAdd = true;
       addPersonne.text = 'Hide Add';
     } else {
-      showPersonneyAdd = false;
+      showPersonneAdd = false;
       addPersonne.text = 'Show Add';
     }
   }
@@ -34,7 +34,7 @@ class PersonneTable extends WebComponent {
   }
 
   showContacts(Personne personne) {
-    ButtonElement personneContacts = querySelector("#${personne.code}");
+    ButtonElement personneContacts = querySelector('#${personne.code}');
     if (!showPersonneContacts && personneContacts.text == 'Show') {
       showPersonneContacts = true;
       this.personne = personne;

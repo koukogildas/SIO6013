@@ -9,7 +9,7 @@ class Personne extends ConceptEntity<Personne> {
   String get idPersonne => super.code;
   set idPersonne(String idPersonne){
     if(code == null){
-      code = '${nom} ${prenom}';
+      code = '${nom}${prenom}';
     }
   }
 

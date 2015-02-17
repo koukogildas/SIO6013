@@ -6,9 +6,9 @@ class PersonneAdd extends WebComponent {
   Personnes personnes;
 
   add() {
-    InputElement nom = querySelector('#add-persone-nom');
-    InputElement prenom = querySelector('#add-persone-prenom');
-    Element message = querySelector("#add-persone-message");
+    InputElement nom = querySelector('#add-personne-nom');
+    InputElement prenom = querySelector('#add-personne-prenom');
+    Element message = querySelector("#add-personne-message");
     var error = false;
     message.text = '';
     if (nom.value.trim() == '') {

@@ -3,7 +3,6 @@
 <html>
   <head>
   	<meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>contact edit</title>
   </head>
  
@@ -18,19 +17,19 @@
         </div>
         <div template if="showContactEdit">
           <contact-edit
-            category="{{ personne }}"
+            personne="{{ personne }}"
             contacts ="{{ contacts }}"
             contact ="{{ contact }}">
           </contact-edit>
         </div>
         <table>
           <caption class="marker">
-            Links of {{ category.code }} category
+            Contacts of {{ personne.code }} personne
             <button id="addContactButton" on-click="add()">Show Add</button>
           </caption>
           <tr>
             <th>Email</th>
-            <th>Téléphone/th>
+            <th>Téléphone</th>
             <th>Edit</th>
             <th>Remove</th>
           </tr>

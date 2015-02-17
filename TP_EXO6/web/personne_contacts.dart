@@ -24,7 +24,7 @@ load() {
 }
 
 save() {
-  window.localStorage['dartlero_category_links'] =
+  window.localStorage['dartlero_contacts_personne'] =
       JSON.encode(personnes.toJson());
 }
 
