@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personne_contact_app</title>
+    <link rel="stylesheet" href="../../packages/EXO8/styles/input.css"/>
+    <link rel="stylesheet" href="../../packages/EXO8/styles/contact.css"/>
+    <link rel="stylesheet" href="../../packages/EXO8/styles/marker.css"/>
+    <link rel="stylesheet" href="../../packages/EXO8/styles/page.css"/>
+    <link rel="stylesheet" href="../../packages/EXO8/styles/table.css"/>
+    <link rel="import" href="../../packages/EXO8/Vue/personne/personne_table.html"/>
+    <link rel="import" href="../../packages/polymer/polymer.html">
+  </head>
+ 
+  <body>
+    <polymer-element name="personne-contact-app">
+      <template>
+      
+       <style>
+        .page-title {
+          font-family: arial, sans-serif;
+          font-size: 24px;
+          font-weight: bold;
+          color: #003366;
+          padding: 12px;
+        }   
+       </style>
+        
+        <div class="page-title">Mon Agenda</div>
+        
+        <br/>
+         <personne-table id="personne-table" personnes="{{personnes}}" > </personne-table>
+         
+      </template>      
+    <script type="application/dart" src="personne_contact_app.dart"></script>
+   </polymer-element>
+  </body>
+</html>
