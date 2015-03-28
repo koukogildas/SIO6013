@@ -12,46 +12,44 @@
     <polymer-element name="personne-edit">
       <template>      
           <style>
-                         .marker {
-              font-family: arial, sans-serif;
-              font-size: 16px;
+              .marker {
+                font-family: arial, sans-serif;
+                font-size: 16px;
+                font-weight: bold;
+                color: #003366;
+                background: #ffe4b5;
+                padding: 1px;
+                } 
+            label {
+              font-family: verdana, sans-serif;
               font-weight: bold;
-              color: #003366;
-              background: #ffe4b5;
+              color: #ffffff;
+              background: #336799;
               padding: 1px;
-              } 
-          label {
-            font-family: verdana, sans-serif;
-            font-weight: bold;
-            color: #ffffff;
-            background: #336799;
-            padding: 1px;
-            border-right: 1px solid #999999;
-            border-bottom: 1px solid #999999;
-          }
-          input {
-            font-family: arial, sans-serif;
-            font-size: 14px;
-          }
-          button {
-            padding: 1px;
-            background: #ffcc99;
-            border-right: 1px solid #999;
-            border-bottom: 1px solid #999;
-            border-style: outset;
-            border-color: #d7b9c9;
-            font-weight: bold;
-            text-align: center;
-            margin-left: auto;
-            margin-right: auto;
-          }
-          button:active {
-            background: orangered;
-            border-color: blue;
-          } 
-        </style>
-        <!-- Début: Formulaire pour éditer une personne -->
-<!--             <div id="showPersonneEditForm" style="display: none;"> -->
+              border-right: 1px solid #999999;
+              border-bottom: 1px solid #999999;
+            }
+            input {
+              font-family: arial, sans-serif;
+              font-size: 14px;
+            }
+            button {
+              padding: 1px;
+              background: #ffcc99;
+              border-right: 1px solid #999;
+              border-bottom: 1px solid #999;
+              border-style: outset;
+              border-color: #d7b9c9;
+              font-weight: bold;
+              text-align: center;
+              margin-left: auto;
+              margin-right: auto;
+            }
+            button:active {
+              background: orangered;
+              border-color: blue;
+            } 
+        </style>        
             <div>
               <span id="personneCaptionOfEdit" class="marker"> Personne courante: {{personne.prenom}} {{personne.nom}} </span> 
               <br /> <label for="edit-personne-name">Name</label> <input
@@ -62,7 +60,6 @@
               <button id="updatePersonneButton" on-click="{{update}}">Update</button>
               <span id="edit-personne-message"></span>
             </div>
-            <!--Fin -->
       <script type="application/dart" src="../../controleur/personne/personne_edit.dart"></script>
       </template>
     </polymer-element>

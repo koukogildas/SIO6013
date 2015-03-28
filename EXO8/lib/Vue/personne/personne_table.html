@@ -70,54 +70,49 @@
       <table>
         <tr>
           <td>
-            <!--   Personne    -->
             <section>
-              <!-- Début: Formulaire pour ajouter une personne -->
+            
               <template if="{{showAdd}}">
                 <personne-add personnes="{{personnes}}">  </personne-add>
               </template>
-              <!--Fin -->
     
-              <!-- Début: Formulaire pour éditer une personne -->
               <template if="{{showEdit}}">
-                <personne-edit id= "personne-edit" personnes="{{personnes}}"  personne="{{personne}}" > </personne-edit>
+                <personne-edit id= "personne-edit" personnes="{{personnes}}" personne="{{personne}}" > </personne-edit>
               </template>
-              <!--Fin -->
-                
+              
               <br />
-    
-              <!-- Début:Table qui affiche une personne -->
+   
               <table id="table-Personne">
                 <caption class="marker">
                   Personnes
                   <button id="showPersonneAddFormButton" on-click="{{showAddFormPersonne}}">Show Add</button>
                   <button id="savePersonnesData" on-click="{{savePersonne}}" >Save</button>
                 </caption>
+                
                 <tr>
                   <th>Nom</th>
                   <th>Prénom</th>
                   <th colspan="3">Actions</th>
                 </tr>
+                
                 <tbody template repeat="{{personne in personnes.internalList}}">
                  <tr>
                   <td>{{personne.nom}}</td>
                   <td>{{personne.prenom}}</td>
-                  <td><button  idPersonne = {{personne.idPersonne}}  on-click="{{showEditFormPersonne}}">Edit</button></td>
-                  <td><button  idPersonne = {{personne.idPersonne}}  on-click="{{deletePersonne}}">Delete</button></td>
-                  <td><button  idPersonne = {{personne.idPersonne}}  on-click="{{showContactPersonList}}">Contacts</button></td>                                 
+                  <td><button  idPersonne = {{personne.idPersonne}} on-click="{{showEditFormPersonne}}">Edit</button></td>
+                  <td><button  idPersonne = {{personne.idPersonne}} on-click="{{deletePersonne}}">Delete</button></td>
+                  <td><button  idPersonne = {{personne.idPersonne}} on-click="{{showContactPersonList}}">Contacts</button></td>                                 
                  </tr>                
-                </tbody>
+                </tbody>                
               </table>
-              <!--Fin table personne -->
-            </section> <!--    Fin personne  -->
-          </td>
-    
-          <td>
+              
+            </section> 
+          </td> 
           
-          <template if="{{showPersonneContacts}}">
-                <contact-table id="contact-table" personne="{{personne}}" contacts="{{personne.contacts}}"> </contact-table>
-          </template>
-          
+          <td>          
+            <template if="{{showPersonneContacts}}">
+                  <contact-table id="contact-table" personne="{{personne}}" contacts="{{personne.contacts}}"> </contact-table>
+            </template>          
           </td>
         </tr>
       </table> 
